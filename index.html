@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Address Book</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <section class="colorOverlay">
+        <section class="grayBox">
+            <h1>My Contacts</h1>
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Email">
+                <input type="text" placeholder="Phone">
+                <!-- <input type="text" placeholder="Relationship"> -->
+                <select name="relationship">
+                    <option value="friend">Friend</option>
+                    <option value="co-worker">Co-Worker</option>
+                    <option value="family">Family</option>
+                    <option value="other">Other</option>
+                  </select>
+                <button onclick="addressBook.add();" type="button">ADD</button>
+            </form>
+        </section>
+        
+            <section class="contactArea">
+                <section class="contacts">
+                    <h5 class="nameCol">Name: Taz</h5>
+                    <h5 class="emailCol">Email: Taz@gmail.com</h5>
+                    <h5 class="phoneCol">Phone: 586-111-6392</h5>
+                    <h5 class=relCol>Relationship: Co-worker</h5>
+                    <button type="button" class="deleteButton">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </section>
+                <section class="contacts">
+                    <h5 class="nameCol">Name: Jalen</h5>
+                    <h5 class="emailCol">Email: jalen@gmail.com</h5>
+                    <h5 class="phoneCol">Phone: 586-222-6392</h5>
+                    <h5 class="relCol">Relationship: Co-worker</h5>
+                    <button type="button" class="deleteButton">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </section>
+                <section class="contacts">
+                    <h5 class="nameCol">Name: Zavier</h5>
+                    <h5 class="emailCol">Email: zavier@gmail.com</h5>
+                    <h5 class="phoneCol">Phone: 586-333-6392</h5>
+                    <h5 class="relCol">Relationship: Co-worker</h5>
+                    <button type="button" class="deleteButton">
+                        <i class="material-icons">delete</i>
+                    </button>
+                </section>
+            </section>
+        
+    </section>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
