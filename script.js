@@ -11,6 +11,7 @@ class Addressbook {
     }
     display() {
         this.clear();
+        let index = 0;
         for (let contact of this.contacts) {
             const name = document.createElement("h5");
             const email = document.createElement("h5");
@@ -21,7 +22,7 @@ class Addressbook {
             email.textContent = `Email: ${contact.email}`;
             phone.textContent = `Phone: ${contact.phone}`;
             rel.textContent = `Relationship: ${contact.relation}`;
-            delBtn.innerHTML = `<i class="material-icons">delete</i>`
+            delBtn.innerHTML = `<i class="material-icons" id=${index} >delete</i>`
             delBtn.classList.add("deleteButton");
             const container = document.querySelector(".contactArea");
             const newBox = document.createElement("section");
@@ -32,6 +33,7 @@ class Addressbook {
             newBox.appendChild(delBtn);
             newBox.classList.add("contacts");
             container.appendChild(newBox);
+            index++
         }
     }
     clear() {
@@ -39,10 +41,12 @@ class Addressbook {
         contactAreaCol.innerHTML = "";
     }
     deleteAt(target) {
-        console.log("delete");
         if (target.parentElement.classList.contains("deleteButton")) {
+            addressBook.contacts.splice((target.getAttribute("id")), 1);
             target.parentElement.parentElement.remove();
+            this.display();
         }
+
     }
 }
 class Contact {
@@ -54,17 +58,17 @@ class Contact {
     }
 }
 
-const del = document.querySelector(".contactArea")
-    .addEventListener("click", function (e) {
-        const book = new Addressbook();
-        book.deleteAt(e.target);
-    });
+// const del = document.querySelector(".contactArea")
+//     .addEventListener("click", function (e) {
+//         const book = new Addressbook();
+//         book.deleteAt(e.target);
+//     });
 const addressBook = new Addressbook();
 // Creating placeholders
-let taz = new Contact("Taz", "Taz@gmail.com", "586-111-6392", "Co-Worker");
-addressBook.contacts.push(taz)
-let jalen = new Contact("Jalen", "Jalen@gmail.com", "586-222-6392", "Self");
-addressBook.contacts.push(jalen)
-let zavier = new Contact("Zavier", "Zavier@gmail.com", "586-333-6392", "Self");
-addressBook.contacts.push(zavier)
+// let taz = new Contact("Taz", "Taz@gmail.com", "586-111-6392", "Co-Worker");
+// addressBook.contacts.push(taz)
+// let jalen = new Contact("Jalen", "Jalen@gmail.com", "586-222-6392", "Self");
+// addressBook.contacts.push(jalen)
+// let zavier = new Contact("Zavier", "Zavier@gmail.com", "586-333-6392", "Self");
+// addressBook.contacts.push(zavier)
 

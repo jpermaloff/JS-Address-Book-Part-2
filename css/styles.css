@@ -2,19 +2,14 @@
     font-family: Maven Pro;
 }
 body {
-    background-image: url(background.jpg);
+    background-image: url(background.jpg), linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6));
+    background-blend-mode: overlay;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     margin: 0;
 }
 .colorOverlay {
-    position: absolute;
-    background-color:rgba(0,0,0,0.6);
-    height: cover;
-    width: 100%;
-    /* top: 0;
-    left: 0; */
     display: flex;
     justify-content: center;
     flex-direction: column;
