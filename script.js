@@ -44,7 +44,6 @@ class Addressbook {
         if (target.parentElement.classList.contains("deleteButton")) {
             addressBook.contacts.splice((target.getAttribute("id")), 1);
             target.parentElement.parentElement.remove();
-            this.display();
         }
 
     }
