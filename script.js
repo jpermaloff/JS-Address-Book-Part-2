@@ -58,11 +58,11 @@ class Contact {
     }
 }
 
-// const del = document.querySelector(".contactArea")
-//     .addEventListener("click", function (e) {
-//         const book = new Addressbook();
-//         book.deleteAt(e.target);
-//     });
+const del = document.querySelector(".contactArea")
+    .addEventListener("click", function (e) {
+        const book = new Addressbook();
+        book.deleteAt(e.target);
+    });
 const addressBook = new Addressbook();
 // Creating placeholders
 // let taz = new Contact("Taz", "Taz@gmail.com", "586-111-6392", "Co-Worker");
