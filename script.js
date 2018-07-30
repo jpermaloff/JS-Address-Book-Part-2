@@ -63,11 +63,5 @@ const del = document.querySelector(".contactArea")
         book.deleteAt(e.target);
     });
 const addressBook = new Addressbook();
-// Creating placeholders
-// let taz = new Contact("Taz", "Taz@gmail.com", "586-111-6392", "Co-Worker");
-// addressBook.contacts.push(taz)
-// let jalen = new Contact("Jalen", "Jalen@gmail.com", "586-222-6392", "Self");
-// addressBook.contacts.push(jalen)
-// let zavier = new Contact("Zavier", "Zavier@gmail.com", "586-333-6392", "Self");
-// addressBook.contacts.push(zavier)
+
 
